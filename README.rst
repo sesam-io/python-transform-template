@@ -17,7 +17,7 @@ The service listens on port 5001.
 JSON entities can be posted to 'http://localhost:5001/transform'. The result is streamed back to the client.
 
 
-Example:
+Examples:
 
 ::
 
@@ -27,6 +27,22 @@ Example:
        "_id": "jane",
        "message": "Hello world!",
        "name": "Jane Doe"
+     }
+   ]
+
+::
+
+   $ curl -s -XPOST 'http://localhost:5001/transform' -H "Content-type: application/json" -d @sample.json |jq -S .
+   [
+     {
+       "_id": "jane",
+       "message": "Hello world!",
+       "name": "Jane Doe"
+     },
+     {
+       "_id": "john",
+       "message": "Hello world!",
+       "name": "John Smith"
      }
    ]
 
