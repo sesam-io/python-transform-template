@@ -2,7 +2,7 @@
 python-transform-template
 =========================
 
-A python micro service template for transforming a JSON entity stream. This service is designed to be used with the `HTTP transform <https://docs.sesam.io/configuration.html#the-http-transform>`_ in a Sesam service instance. 
+A python microservice template for transforming a JSON entity stream. This service is designed to be used with the `HTTP transform <https://docs.sesam.io/configuration.html#the-http-transform>`_ in a Sesam service instance.
 
 ::
 
@@ -12,7 +12,7 @@ A python micro service template for transforming a JSON entity stream. This serv
   [14/Mar/2019:10:32:40] ENGINE Serving on http://0.0.0.0:5001
   [14/Mar/2019:10:32:40] ENGINE Bus STARTED
 
-The service listens on port 5001.
+The service listens on port 5001. The port number can be changed by passing in the PORT environment variable.
 
 JSON entities can be posted to 'http://localhost:5001/transform'. The result is streamed back to the client.
 
